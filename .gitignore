@@ -1,0 +1,6 @@
+# Ignore key files
+*.sh
+
+# Ignore certificates and keys
+*.pem
+*.key
