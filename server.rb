@@ -8,7 +8,7 @@ class Server
     socket = TCPServer.open(port)
     ssl_context = OpenSSL::SSL::SSLContext.new
     ssl_context.cert = OpenSSL::X509::Certificate.new(File.open('certificate.pem'))
-    ssl_context.key = OpenSSL::PKey::RSA.new(File.open('private_key.pem'))
+    ssl_context.key = OpenSSL::PKey::RSA.new(File.open('key.pem'))
     @ssl_server = OpenSSL::SSL::SSLServer.new(socket, ssl_context)
     @close = false
 
